@@ -11,6 +11,11 @@ Python 3.11 (其他版本没有尝试)
 或者参考此项目自己搭建
 
 本项目是自己搭建的一个sign服务，相比于原始服务，新增了一个获取a1的接口
+
+sign服务启动
+```bash
+python basic_sign_server.py
+```
 ### 安装依赖
 ```bash
 pip install -r requirements.txt
