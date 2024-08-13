@@ -57,7 +57,7 @@ def save_readme(file_name: str, context: bytes):
     now = datetime.datetime.now().strftime("%Y%m%d")
     save_dir_path = os.path.join(md_dir, now)
     if not os.path.exists(save_dir_path):
-        os.mkdir(save_dir_path)
+        os.makedirs(save_dir_path)
     with open(os.path.join(save_dir_path, file_name), 'wb') as f:
         f.write(context)
 
