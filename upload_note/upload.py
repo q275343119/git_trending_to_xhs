@@ -82,8 +82,27 @@ def upload_note():
     images = [
         f"{config_settings.download_dir}/{now.strftime('%Y%m%d')}/TrendingProjects.png",
     ]
-
-    note = xhs_client.create_image_note(title, desc, images)
+    topics = [
+        {
+            "id": "63d293be00000000010012d0",
+            "name": "github宝藏项目",
+            "link": "",
+            "type": "topic"
+        },
+        {
+            "id": "5d35dd9b000000000e0088dc",
+            "name": "Python",
+            "link": "",
+            "type": "topic"
+        },
+        {
+            "id": "61be006c0000000001005c3f",
+            "name": "github",
+            "link": "",
+            "type": "topic"
+        }
+    ]
+    note = xhs_client.create_image_note(title, desc, images, topics=topics)
     beauty_print(note)
     logger.info("上传完毕")
 
