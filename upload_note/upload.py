@@ -78,7 +78,7 @@ def upload_note():
 
     with open(f"{config_settings.download_dir}/{now.strftime('%Y%m%d')}/xhs_note.txt", "r", encoding='utf-8') as f:
         desc = f.read()
-    desc += f"\n#Python[话题]# #github宝藏项目[话题]# #github[话题]#"
+    desc += f"\n#github宝藏项目[话题]# #Python[话题]# #github[话题]#"
     images = [
         f"{config_settings.download_dir}/{now.strftime('%Y%m%d')}/TrendingProjects.png",
     ]
