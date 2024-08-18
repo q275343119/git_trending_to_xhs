@@ -29,7 +29,7 @@ URL_SIGN_A1 = "获取a1的四肢"
 URL_SIGN_SIGN = "h签名地址"
 
 OPENAI_APP_KEY = "your openai app key"
-OPENAI_BASE_URL = "base irl"
+OPENAI_BASE_URL = "base url"
 OPENAI_MODEL = "gpt-4o-mini"
 
 DOWNLOAD_DIR = "./projects_readme"
