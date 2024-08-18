@@ -44,7 +44,7 @@ def get_summarize_for_all():
     messages = [
         {"role": "system",
          "content": f"""你作为一个资深的程序员，每天都有逛github的习惯，并且非常善于总结，且乐于分享，稍后我会将今日({now.strftime('%Y-%m-%d')})python语言的trending项目发给你。
-         你需要输出一段小红书笔记，用于概括和总结今天的趋势，字数限定在300字以内
+         你需要输出一段小红书笔记，用于概括和总结今天的趋势。要求：尽可能多的使用emoji，字数限定在300字以内
          """},
     ]
     now = datetime.now()
