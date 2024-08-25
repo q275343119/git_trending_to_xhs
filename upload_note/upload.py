@@ -73,7 +73,7 @@ def upload_note():
     logger.info("实例化客户端")
     xhs_client = XhsClient(cookie, sign=sign)
 
-    title = f"🌟 {now.strftime('%Y-%m-%d')} | GitHub Python | 趋势✨"
+    title = f"📅 {now.strftime('%Y-%m-%d')} | GitHub Python | 趋势✨"
     logger.info("准备上传笔记")
 
     with open(f"{config_settings.download_dir}/{now.strftime('%Y%m%d')}/xhs_note.txt", "r", encoding='utf-8') as f:
