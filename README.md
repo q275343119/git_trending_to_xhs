@@ -25,8 +25,8 @@ pip install -r requirements.txt
 在`.env.local`中配置参数
 ```dotenv
 URL_GITHUB_TRENDING = "https://github.com/trending/python?since=daily"
-URL_SIGN_A1 = "获取a1的四肢"
-URL_SIGN_SIGN = "h签名地址"
+URL_SIGN_A1 = "获取a1的地址"
+URL_SIGN_SIGN = "签名地址"
 
 OPENAI_APP_KEY = "your openai app key"
 OPENAI_BASE_URL = "base url"
