@@ -16,15 +16,16 @@ def generate_image():
     """
     logger.info(f"输出概览图片")
     today = datetime.now()
-    # 设置图像大小，和原图保持一致
     img_width = 1440
-    img_height = 1920
+    img_height = 1920  # 初始化一个较大的高度
+
+    # 生成一个初始空白图像
     img = Image.new('RGB', (img_width, img_height), color=(255, 255, 255))
     draw = ImageDraw.Draw(img)
 
     # 加载支持中文的字体
     try:
-        font_path = config_settings.font_path # 请将此路径替换为你的实际字体文件路径
+        font_path = config_settings.font_path  # 替换为你的实际字体路径
         font_title = ImageFont.truetype(font_path, 28)
         font_header = ImageFont.truetype(font_path, 22)
         font_text = ImageFont.truetype(font_path, 18)
@@ -96,8 +97,13 @@ def generate_image():
 
             row = f.readline()
 
-            # 保存图像
-        img.save(f"{config_settings.download_dir}/{today.strftime('%Y%m%d')}/TrendingProjects.png")
+    # 计算最终的画布高度并进行裁剪
+    final_img_height = y_position + 50  # 给一点底部的额外留白
+    img = img.crop((0, 0, img_width, final_img_height))
+
+    # 保存图像
+    img.save(f"{config_settings.download_dir}/{today.strftime('%Y%m%d')}/TrendingProjects.png")
+
 
 
 
